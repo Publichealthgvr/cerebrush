@@ -2,49 +2,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CereBrush – Wellness Meets Smart Brushing</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CereBrush | A Behaviour-First Smart Toothbrush</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-blue: #183b82;
+      --accent-blue: #2563eb;
+      --soft-gray: #d1d5db;
+      --dark: #111827;
+      --light: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: var(--primary-blue);
+      color: var(--light);
+      padding: 4rem 2rem;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    .section {
+      padding: 3rem 2rem;
+      max-width: 800px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: slideUp 1s ease forwards;
+    }
+
+    .section:nth-child(2) { animation-delay: 0.3s; }
+    .section:nth-child(3) { animation-delay: 0.6s; }
+    .section:nth-child(4) { animation-delay: 0.9s; }
+
+    .section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: var(--primary-blue);
+    }
+
+    .section p, .section ul {
+      font-size: 1rem;
+      color: var(--dark);
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    .product-image {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .product-image img {
+      width: 220px;
+      max-width: 80%;
+    }
+
+    .cta {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .cta a {
+      background-color: var(--accent-blue);
+      color: var(--light);
+      padding: 1rem 2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer {
+      background-color: var(--primary-blue);
+      color: var(--light);
+      text-align: center;
+      padding: 1.5rem 2rem;
+      font-size: 0.9rem;
+    }
+
+    @keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>CereBrush</h1>
-        <p>The world’s first behavior-first smart toothbrush</p>
-        <a href="#how-it-works" class="cta-button">See How It Works</a>
-    </header>
+  <header>
+    <h1>CereBrush</h1>
+    <p>A Behaviour-First Smart Toothbrush</p>
+  </header>
 
-    <section id="how-it-works">
-        <h2>How It Works</h2>
-        <div class="steps">
-            <div><strong>1.</strong> Pick up the brush</div>
-            <div><strong>2.</strong> Hear your personalized audio cue</div>
-            <div><strong>3.</strong> Build a lasting brushing habit</div>
-        </div>
-    </section>
+  <div class="product-image">
+    <img src="product.png" alt="CereBrush Product Image" />
+  </div>
 
-    <section id="why-it-works">
-        <h2>Why It Works</h2>
-        <p>Tracking alone isn’t enough. CereBrush turns brushing into a feel-good ritual using sound, science, and routine.</p>
-    </section>
+  <section class="section">
+    <h2>Why CereBrush?</h2>
+    <p>CereBrush isn’t about tracking. It’s about building habit. Using audio cues at the moment of action, we turn brushing into a wellness ritual — not a chore.</p>
+  </section>
 
-    <section id="audience">
-        <h2>Designed For</h2>
-        <ul>
-            <li>Wellness-focused morning routines</li>
-            <li>People with ADHD or cognitive fatigue</li>
-            <li>Children, seniors, and anyone struggling with brushing</li>
-        </ul>
-    </section>
+  <section class="section">
+    <h2>How It Works</h2>
+    <ul>
+      <li>Pick up the brush</li>
+      <li>Hear a personalized affirmation or sound</li>
+      <li>Brush better, longer — without needing to think about it</li>
+    </ul>
+  </section>
 
-    <section id="tech">
-        <h2>The Tech Behind It</h2>
-        <p>Built with an audio module (DFPlayer Mini), triggered by movement. Plays affirmations or cues. Recharges via USB. Designed for grime-free docking.</p>
-    </section>
+  <section class="section">
+    <h2>Designed For</h2>
+    <p>Wellness lovers, ADHD warriors, neurodiverse thinkers, kids, elders — anyone who struggles with brushing consistently.</p>
+  </section>
 
-    <footer>
-        <p>Made with ❤️ for wellness by Megan Guturi</p>
-    </footer>
+  <div class="cta">
+    <a href="#">See It in Action</a>
+  </div>
+
+  <footer>
+    &copy; 2025 CereBrush. Designed for wellness.
+  </footer>
 </body>
 </html>
